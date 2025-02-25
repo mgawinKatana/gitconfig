@@ -1,0 +1,60 @@
+[alias]
+	hist = log --pretty=format:'%h %ad | %s$d [%an]' --graph --date=short
+
+[column]
+	ui = auto
+
+[commit]
+	verbose = true
+
+[core]
+	autocrlf = false
+	longpaths = true
+	
+[branch]
+	sort = committerdate
+	
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+	submodule = log
+	
+[feature]
+	experimental = true
+	
+[format]
+	pretty = fuller
+	
+[help]
+	autocorrect = prompt
+	
+[log]
+	data = iso-local
+	
+[merge]
+	conflictstyle = zdiff3
+	
+[pull]
+	rebase = true
+	
+[push]
+	autoSetupRemote = true
+	default = current
+	useForceIfIncludes = true
+
+[rebase]
+	autostash = true
+	
+[rerere]
+	enabled = true
+	
+[safe]
+	directory = *
+	
+[status]
+	submoduleSummary = true
+	
+[tag]
+	sort = version:refname
