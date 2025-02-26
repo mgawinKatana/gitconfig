@@ -1,5 +1,6 @@
 [alias]
 	hist = log --pretty=format:'%h %ad | %s$d [%an]' --graph --date=short
+	out = "log @{u}.."
 
 [column]
 	ui = auto
@@ -10,9 +11,15 @@
 [core]
 	autocrlf = false
 	longpaths = true
+	pager = delta
 	
 [branch]
 	sort = committerdate
+	
+[delta]
+	navigate = true
+	dark = true
+	line-numbers = true
 	
 [diff]
 	algorithm = histogram
@@ -29,6 +36,9 @@
 	
 [help]
 	autocorrect = prompt
+	
+[interactive]
+	diffFilter = delta --color-only
 	
 [log]
 	data = iso-local
@@ -52,9 +62,13 @@
 	
 [safe]
 	directory = *
-	
+
+[stash]
+	showPatch = true
+
 [status]
 	submoduleSummary = true
+	showStash = true
 	
 [tag]
 	sort = version:refname
