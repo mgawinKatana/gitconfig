@@ -14,15 +14,10 @@
 [core]
 	autocrlf = false
 	longpaths = true
-	pager = delta
+	pager = bat
 	
 [branch]
 	sort = committerdate
-	
-[delta]
-	navigate = true
-	dark = true
-	line-numbers = true
 	
 [diff]
 	algorithm = histogram
