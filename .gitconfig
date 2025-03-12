@@ -35,9 +35,6 @@
 [help]
 	autocorrect = prompt
 	
-[interactive]
-	diffFilter = delta --color-only
-	
 [log]
 	data = iso-local
 	
