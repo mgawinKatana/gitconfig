@@ -1,6 +1,29 @@
 [alias]
 	hist = log --pretty=format:'%h %ad | %s$d [%an]' --graph --date=short
 	out = "log @{u}.."
+	last = log -1 HEAD
+	prev = diff HEAD~1
+
+	la = config --get-regexp ^alias
+
+	h = help
+	s = status
+
+	c = commit
+	ca = commit --ammend
+
+	sw = switch --ignore-other-worktrees
+
+	rb = rebase
+	rbc = rebase --continue
+	rba = rebase --abort
+	rt = restore
+
+	unstage = reset HEAD --
+	undo = reset HEAD~1 --soft
+	redo = reset 'HEAD@{1}' --soft # use only immediately after undo
+
+	ui = !lazygit
 
 [column]
 	ui = auto
@@ -64,6 +87,6 @@
 [status]
 	submoduleSummary = true
 	showStash = true
-	
+
 [tag]
 	sort = version:refname
