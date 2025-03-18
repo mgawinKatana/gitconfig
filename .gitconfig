@@ -13,7 +13,7 @@
 	s = status
 
 	c = commit
-	ca = commit --ammend
+	ca = commit --amend
 
 	sw = switch --ignore-other-worktrees
 
