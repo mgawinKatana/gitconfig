@@ -24,6 +24,7 @@
 	sw = switch --ignore-other-worktrees
 
 	rb = rebase
+	rbi = rebase -i
 	rbc = rebase --continue
 	rba = rebase --abort
 
