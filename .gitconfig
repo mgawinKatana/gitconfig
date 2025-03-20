@@ -2,7 +2,7 @@
   	detachedHead = false
 
 [alias]
-	hist = log --pretty=format:'%h %ad | %s$d [%an]' --graph --date=short
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	out = "log @{u}.."
 	last = log -1 HEAD
 	prev = diff HEAD~1 --staged
