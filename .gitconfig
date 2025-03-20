@@ -1,16 +1,22 @@
 [advice]
-  detachedHead = false
+  	detachedHead = false
 
 [alias]
 	hist = log --pretty=format:'%h %ad | %s$d [%an]' --graph --date=short
 	out = "log @{u}.."
 	last = log -1 HEAD
-	prev = diff HEAD~1
+	prev = diff HEAD~1 --staged
 
 	la = config --get-regexp ^alias
 
 	h = help
 	s = status
+	f = fetch
+	p = pull
+	pu = push
+	d = diff
+	ds = diff --staged
+	l = log
 
 	c = commit
 	ca = commit --amend
@@ -20,11 +26,15 @@
 	rb = rebase
 	rbc = rebase --continue
 	rba = rebase --abort
+
 	rt = restore
+	rts = restore --staged
 
 	unstage = reset HEAD --
 	undo = reset HEAD~1 --soft
 	redo = reset 'HEAD@{1}' --soft # use only immediately after undo
+
+	qs = commit -a -m 'WIP: quick save' -n
 
 	ui = !lazygit
 
