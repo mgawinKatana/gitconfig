@@ -65,6 +65,9 @@
 	
 [feature]
 	experimental = true
+
+[fetch]
+	prune = true
 	
 [format]
 	pretty = fuller
